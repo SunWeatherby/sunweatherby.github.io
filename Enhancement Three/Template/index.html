@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS499 Dashboard</title>
+    <style>
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .filter-buttons button {
+            margin-right: 5px;
+        }
+
+        .search-box input {
+            padding: 6px;
+            min-width: 150px;
+        }
+
+        .filter-buttons button {
+            margin-left: 10px;
+        }
+
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .tab-buttons {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-right: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background: #f0f0f0;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+            .tab-content.active {
+                display: block;
+            }
+    </style>
+</head>
+<body>
+    <h1>CS499 MongoDB Dashboard</h1>
+
+    <div class="tab-buttons">
+        <button onclick="showTab('contacts')">Contacts</button>
+        <button onclick="showTab('tasks')">Tasks</button>
+        <button onclick="showTab('appointments')">Appointments</button>
+    </div>
+
+    <div id="contacts" class="tab-content active">
+        <div class="section-header">
+            <div class="header-left">
+                <h2>Contacts</h2>
+                <div class="filter-buttons">
+                    <button onclick="filterContacts('all')">All</button>
+                    <button onclick="filterContacts('Employee')">Employees</button>
+                    <button onclick="filterContacts('Customer')">Customers</button>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search ID..." oninput="searchTableById('contacts', this.value)">
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Type</th>
+            </tr>
+            {% for contact in contacts %}
+            <tr data-type="{{ contact.type }}">
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.first_name }} {{ contact.last_name }}</td>
+                <td>{{ contact.number }}</td>
+                <td>{{ contact.address }}</td>
+                <td>{{ contact.type }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div id="tasks" class="tab-content">
+        <div class="section-header">
+            <div class="header-left">
+                <h2>Tasks</h2>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search ID..." oninput="searchTableById('tasks', this.value)">
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Assigned Employee ID</th>
+                <th>Employee Name</th>
+            </tr>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.id }}</td>
+                <td>{{ task.name }}</td>
+                <td>{{ task.desc }}</td>
+                <td>{{ task.assigned_employee_id }}</td>
+                <td>{{ task.assigned_employee_name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div id="appointments" class="tab-content">
+        <div class="section-header">
+            <div class="header-left">
+                <h2>Appointments</h2>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search ID..." oninput="searchTableById('appointments', this.value)">
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Assigned Customer ID</th>
+                <th>Customer Name</th>
+            </tr>
+            {% for appt in appointments %}
+            <tr>
+                <td>{{ appt.id }}</td>
+                <td class="formatted-date">{{ appt.appointment_date }}</td>
+                <td>{{ appt.description }}</td>
+                <td>{{ appt.assigned_customer_id }}</td>
+                <td>{{ appt.assigned_customer_name }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <script>
+        // Switch tabs 
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll(".tab-content");
+            tabs.forEach(tab => tab.classList.remove("active"));
+            document.getElementById(tabId).classList.add("active");
+        }
+
+        // Format date
+        function formatDateString(dateString) {
+            const date = new Date(dateString);
+            const options = {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            };
+
+            // Add ordinal suffix to day
+            const day = date.getDate();
+            const suffix = ['th', 'st', 'nd', 'rd'];
+            const v = day % 100;
+            const ordinal = suffix[(v - 20) % 10] || suffix[v] || suffix[0];
+            const dayWithOrdinal = `${day}${ordinal}`;
+
+            // Format using Intl.DateTimeFormat
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            const parts = formatter.formatToParts(date);
+
+            let formatted = '';
+            for (const part of parts) {
+                if (part.type === 'day') {
+                    formatted += dayWithOrdinal;
+                } else {
+                    formatted += part.value;
+                }
+            }
+
+            return formatted;
+        }
+
+        // Format appointment dates
+        document.querySelectorAll('.formatted-date').forEach(cell => {
+            const rawDate = cell.textContent.trim();
+            cell.textContent = formatDateString(rawDate);
+        });
+
+        // Filter contacts by type
+        function filterContacts(type) {
+            const rows = document.querySelectorAll('#contacts table tr[data-type]');
+            rows.forEach(row => {
+                const contactType = row.getAttribute('data-type');
+                if (type === 'all' || contactType === type) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+
+        // Search by ID
+        function searchTableById(sectionId, query) {
+            const rows = document.querySelectorAll(`#${sectionId} table tr`);
+            const lowerQuery = query.trim().toLowerCase();
+
+            rows.forEach((row, index) => {
+                // Skip header row
+                if (index === 0) {
+                    row.style.display = '';
+                    return;
+                }
+
+                const idCell = row.cells[0];
+                if (!idCell) return;
+
+                const idText = idCell.textContent.trim().toLowerCase();
+                row.style.display = idText.includes(lowerQuery) ? '' : 'none';
+            });
+        }
+    </script>
+</body>
+</html>
