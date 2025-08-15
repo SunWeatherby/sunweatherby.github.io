@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1234",
+    "first_name": "Susannah",
+    "last_name": "Weatherby",
+    "number": "123-45-6789",
+    "address": "10 Cooler St.",
+    "type": "Customer"
+  },
+  {
+    "id": "9217",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "number": "927-28-1937",
+    "address": "27 This St.",
+    "type": "Customer"
+  },
+  {
+    "id": "4321",
+    "first_name": "John",
+    "last_name": "Doe",
+    "number": "482-19-3825",
+    "address": "11 Anon Road",
+    "type": "Employee"
+  },
+  {
+    "id": "7203",
+    "first_name": "Emma",
+    "last_name": "Tea",
+    "number": "836-78-2957",
+    "address": "380 Reality Road",
+    "type": "Employee"
+  }
+]
