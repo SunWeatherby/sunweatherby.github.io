@@ -6,7 +6,7 @@ There will be a summary of the code review here
 
 ---
 
-Original build files: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/Original).
+Download the original build files: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/Original).
 
 ## Enhancement 1: Software Engineering and Design
 
@@ -22,7 +22,7 @@ Download the build files and narrative document for enhancement one: [here](http
 
 Summary of enhancement 2 here
 
-PHOTO HERE
+![screenshot](/assets/enhancementTwo.png)
 
 However upon completion of this enhancement, I found myself questing my initial idea for second enhancement, which was to combine all the objects my making Tasks and Appointments children of Contact objects. I believe it might be better to have them still separate, but tasks and/or appointments could require an assigned contact. This might also require contacts having a label for employees and customers or even splitting them into employee contacts and customer contacts, although I worry having an additional class to specify this would clutter the code or make it redundant.
 
