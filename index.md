@@ -12,6 +12,8 @@ Original build files: HERE
 
 Summary of enhancement 1 here
 
+Download the build files and the full narative document for enhancement one: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/EnhancementOne).
+
 ## Enhancement 2: Algorithms and Data Structures
 
 Summary of enhancement 2 here
