@@ -10,7 +10,7 @@ Original build files: [here](https://github.com/SunWeatherby/sunweatherby.github
 
 ## Enhancement 1: Software Engineering and Design
 
-PHOTO HERE
+![screenshot](enhancementOne.png)
 
 For enhancement one of the artifacts, I rebuilt the code of each individual file in python as a singular file with separate class and model and service classes for each object. The appointment service originally did not have a function for updating existing appoints, so an update method was added. To ensure that users did not try to add an appointment that was set for a past date, an error throw was also added to prevent the user from doing so. Finally, I added a looping main method for users to access the create, read, update, and deleted methods for each class.
 Since the original artifact was only meant for utilizing automatic testing, the process of enhancing the artifact essentially meant rebuilding from a scratch. The majority of time spent was on the main method. Since the main method initially didn’t exist, I had to think about how I wanted it to properly connect to the different functions of the program. Although the final result is still relatively basic, I believed I learned a bit more about date conversion and adjusting code to make it more user-friendly with the appointment method since the original artifact did not have a function for converting strings into date and time. My first attempt used date and military time to create appointments, but after some consideration I learned how to implement AM/PM into this since I believe most users would attempt to do this anyway or would have a harder time trying to read or write military time.
