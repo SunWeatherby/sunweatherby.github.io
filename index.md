@@ -22,9 +22,8 @@ Download the build files and narrative document for enhancement one: [here](http
 
 ![screenshot](/assets/enhancementTwo.png)
 
-Summary of enhancement 2 here
-
-However upon completion of this enhancement, I found myself questing my initial idea for second enhancement, which was to combine all the objects my making Tasks and Appointments children of Contact objects. I believe it might be better to have them still separate, but tasks and/or appointments could require an assigned contact. This might also require contacts having a label for employees and customers or even splitting them into employee contacts and customer contacts, although I worry having an additional class to specify this would clutter the code or make it redundant.
+For the second enhancement, I chose to continue improving the previous artifact because I believe that the best way to demonstrate my abilities is by following up on previous enhancements and show my skill in data structures by developing the object classes further. Originally I had planned to combine all the objects my making Tasks and Appointments children of Contact objects, but I found myself questioning this idea after completion of enhancement one. I instead came to the decision to keep them separate, but have tasks and appointments require an assigned contact. Contacts were also given a sub-type for employees and customers to differentiate the two. In addition to this, appointments and tasks now required an assigned customer or employee respectively in order to be created, which are listed when attempting to create one. If the user attempts to create an appointment/task while there are no existing customers/employees, the program will stop before any information can be entered and inform the user no customer/employees exist. During this enhancement I also decided to re-organize the code to have a reading flow that made more sense, as previously the first option on the menu was appointments instead of contacts, which couldnt exist without a contact. 
+By implementing these changes, I believe this enhancement meets the course goals of utilizing computer science practices and standards to solve a given problem while managing the trade-offs and using a security mindset to mitigate design flaws in the program.
 
 Download the build files and narrative document for enhancement two: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/EnhancementTwo).
 
@@ -32,7 +31,8 @@ Download the build files and narrative document for enhancement two: [here](http
 
 ![screenshot](/assets/enhancementThree.png)
 
-Summary of enhancement 3 here
+For the final enhancement, I chose to finish improving the previous artifact in order to create a complete version of the program. For this enhancement, I demonstrated my skill in databases by adding external data saving and exporting the information to MongoDB to be displayed on an interactive HTML page. All information on contacts, tasks, and appoints are saved to respective json files, which are exported after exit is selected on the main menu. A few objects were pre-created and saved to the files for easy testing. A flask backend is used to fetch the information from MongoDB and render the page using the index template. Additionally, this backend also sorts the appointments by date. The index file creates an interactive page which lets users select whether to display contacts, tasks, or, appointments using buttons. Contacts also has additional buttons for displaying all contacts or just customers or employees. Each of these lists also has a search bar to be able to search the list by ID.
+This enhancement took the longest out of the three enhancements, as it required needing to code 3 different files to ensure everything worked instead of just one. While the json saving and exporting went smoothly, I struggled with coding the application properly as I have not used Flask before. I believe I learned a lot about Flask as a result. I also had difficulty properly organizing the HTML to look clean during runtime and had to learn how to properly code the spacing to ensure the page elements would be displayed as I intended them to.
 
 Download the build files and narrative document for enhancement two: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/EnhancementThree).
 
