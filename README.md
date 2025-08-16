@@ -2,4 +2,4 @@
 
 Portfolio: https://sunweatherby.github.io/
 
-This branch contains the build files for enhancement two of the artifact.
+This branch contains the build files for enhancement two of the artifact its full narrative document.
