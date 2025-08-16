@@ -18,8 +18,12 @@ Download the build files and the full narative document for enhancement one: [he
 
 Summary of enhancement 2 here
 
+Download the build files and the full narative document for enhancement two: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/EnhancementTwo).
+
 ## Enhancement 3: Databases
 
 Summary of enhancement 3 here
+
+Download the build files and the full narative document for enhancement two: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/EnhancementThree).
 
 # Self-assessment
