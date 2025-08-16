@@ -6,7 +6,7 @@ There will be a summary of the code review here
 
 ---
 
-Original build files: HERE
+Original build files: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/Original).
 
 ## Enhancement 1: Software Engineering and Design
 
