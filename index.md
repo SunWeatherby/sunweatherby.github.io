@@ -20,9 +20,9 @@ Download the build files and narrative document for enhancement one: [here](http
 
 ## Enhancement 2: Algorithms and Data Structures
 
-Summary of enhancement 2 here
-
 ![screenshot](/assets/enhancementTwo.png)
+
+Summary of enhancement 2 here
 
 However upon completion of this enhancement, I found myself questing my initial idea for second enhancement, which was to combine all the objects my making Tasks and Appointments children of Contact objects. I believe it might be better to have them still separate, but tasks and/or appointments could require an assigned contact. This might also require contacts having a label for employees and customers or even splitting them into employee contacts and customer contacts, although I worry having an additional class to specify this would clutter the code or make it redundant.
 
@@ -30,7 +30,7 @@ Download the build files and narrative document for enhancement two: [here](http
 
 ## Enhancement 3: Databases
 
-PHOTO HERE
+![screenshot](/assets/enhancementThree.png)
 
 Summary of enhancement 3 here
 
