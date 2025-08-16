@@ -1,4 +1,4 @@
-introduction here
+The artifact I have chosen for all three enhancements in this course are three java files from Project Two of CS 320: Software Testing, Automation, and Quality Assurance which were created April 28th, 2024. These three files contain only basic functions for creating and deleting Appointments, Contacts, or Tasks objects of their respective file names, and existed only to experiment with manual and automatic function testing. By taking a non-functional program and converting it into a fully-functional service, I planned on demonstrating my abilities throughout the course.
 
 ## Code Review
 
