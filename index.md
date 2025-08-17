@@ -51,6 +51,7 @@ These three enhancements of the artifacts demonstrate this growth through the co
 - Software Engineering and Design: I restructured a simple Java artifact into a modular Python application using service layers and separate classes for logic, storage, and interaction.
 - Databases: I implemented persistent storage using JSON and integrated MongoDB to save and display data through a Flask-powered HTML interface. 
 - Security and Data Integrity: I incorporated logic to ensure that invalid operations couldn't occur. For example, disallowing appointment creation when no contacts exist or preventing the use of outdated dates.
+
 Each stage adds new complexity to the same artifact: starting with a basic function tester, then building a working application with data relationships, and finally connecting it to a database and interactive interface. I chose to work from the same base throughout because I wanted to demonstrate not only my technical progression, but also my ability to refactor, build upon, and improve existing work, a highly relevant skill in real-world software maintenance and iteration.
 
 
