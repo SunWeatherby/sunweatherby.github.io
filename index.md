@@ -2,7 +2,7 @@ The artifacts I have chosen for all three enhancements in this course are three 
 
 ## Code Review
 
-![video](https://youtu.be/DugBr6oFJ4M)
+[https://youtu.be/DugBr6oFJ4M](https://youtu.be/DugBr6oFJ4M)
 
 The above video contains the code review of my artifacts. As this was done early in the course, my intial plans for the project do not completely align with the final result due reconsidering my plans throughout the course.
 
