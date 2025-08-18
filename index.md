@@ -1,4 +1,20 @@
+
+Throughout my time in the Computer Science program, I've focused on building a strong foundation in core technical skills while also learning how to apply those skills to solve real-world problems independently. Completing this ePortfolio allowed me to reflect on how far I have come, from working on isolated functions to building a complete, functioning application with a backend database and interactive web interface.
+The coursework and projects I completed helped me shape my professional goals and reaffirmed my interest in software development. I am especially proud of my ability to take a basic, non-functional artifact—intended initially only for test automation and turn it into a working application that saves, sorts, and displays data.
+
+While I didn't have team-based projects in the program, this allowed me to work independently on every stage of development, from planning and design to implementation and debugging. For example, I had to plan the architecture of my application independently, decide how to structure object relationships, and troubleshoot logic errors and integration issues without relying on others. This required strong problem-solving skills, which are essential in any professional software engineering job. This independent development also led me to approach my projects with a focus on communicating with future users or stakeholders who would need to interact with the system. This was especially true during the second and third enhancements, where I had to anticipate how users would navigate the program, input data, and interpret information. For instance, I redesigned the main menu structure to improve the flow of object creation, requiring contacts to be displayed before appointments or tasks. I also added clear prompts, error messages, and safeguards to make the program easier to understand and harder to misuse. These decisions mirror how developers must consider the needs of stakeholders, such as business users or clients, when building user-facing systems. My work on the HTML interface reinforced this, as I needed to organize the layout and filters in a way that would make sense to the average user.
+
+These three enhancements of the artifacts demonstrate this growth through the course outcomes; 
+- Data Structures and Algorithms: I used basic data structures to organize user input and object relationships. 
+- Software Engineering and Design: I restructured a simple Java artifact into a modular Python application using service layers and separate classes for logic, storage, and interaction.
+- Databases: I implemented persistent storage using JSON and integrated MongoDB to save and display data through a Flask-powered HTML interface. 
+- Security and Data Integrity: I incorporated logic to ensure that invalid operations couldn't occur. For example, disallowing appointment creation when no contacts exist or preventing the use of outdated dates.
+
+Each stage adds new complexity to the same artifact: starting with a basic function tester, then building a working application with data relationships, and finally connecting it to a database and interactive interface. I chose to work from the same base throughout because I wanted to demonstrate not only my technical progression, but also my ability to refactor, build upon, and improve existing work, a highly relevant skill in real-world software maintenance and iteration.
+
 The artifacts I have chosen for all three enhancements in this course are three Java files from Project Two of CS 320: Software Testing, Automation, and Quality Assurance, which were created on April 28th, 2024. These three files contain only basic functions for creating and deleting Appointments, Contacts, or Tasks objects of their respective file names, and exist only to experiment with manual and automatic function testing. By taking a non-functional program and converting it into a fully-functional service, I planned on demonstrating my abilities throughout the course.
+
+---
 
 ## Code Review
 
@@ -38,22 +54,5 @@ Additionally, this backend also sorts the appointments by date. The index file c
 This enhancement took the longest, as it required coding three different files to ensure everything worked instead of just one. While the JSON saving and exporting went smoothly, I struggled with coding the application properly since I was new to Flask. I learned a lot about Flask as a result. I also had difficulty properly organizing the HTML to look clean during runtime. I had to learn how to properly code the spacing to ensure the page elements would be displayed as intended. By providing a visual interface to users and creating a database for employees to organize information, this enhancement meets the course goals of delivering professional-quality written and visual communications and employing strategies for building collaborative environments.
 
 Download the build files and narrative document for enhancement three: [here](https://github.com/SunWeatherby/sunweatherby.github.io/tree/EnhancementThree).
-
----
-
-# Self-assessment
-
-Throughout my time in the Computer Science program, I've focused on building a strong foundation in core technical skills while also learning how to apply those skills to solve real-world problems independently. Completing this ePortfolio allowed me to reflect on how far I have come, from working on isolated functions to building a complete, functioning application with a backend database and interactive web interface.
-The coursework and projects I completed helped me shape my professional goals and reaffirmed my interest in software development. I am especially proud of my ability to take a basic, non-functional artifact—intended initially only for test automation and turn it into a working application that saves, sorts, and displays data.
-
-While I didn't have team-based projects in the program, this allowed me to work independently on every stage of development, from planning and design to implementation and debugging. For example, I had to plan the architecture of my application independently, decide how to structure object relationships, and troubleshoot logic errors and integration issues without relying on others. This required strong problem-solving skills, which are essential in any professional software engineering job. This independent development also led me to approach my projects with a focus on communicating with future users or stakeholders who would need to interact with the system. This was especially true during the second and third enhancements, where I had to anticipate how users would navigate the program, input data, and interpret information. For instance, I redesigned the main menu structure to improve the flow of object creation, requiring contacts to be displayed before appointments or tasks. I also added clear prompts, error messages, and safeguards to make the program easier to understand and harder to misuse. These decisions mirror how developers must consider the needs of stakeholders, such as business users or clients, when building user-facing systems. My work on the HTML interface reinforced this, as I needed to organize the layout and filters in a way that would make sense to the average user.
-
-These three enhancements of the artifacts demonstrate this growth through the course outcomes; 
-- Data Structures and Algorithms: I used basic data structures to organize user input and object relationships. 
-- Software Engineering and Design: I restructured a simple Java artifact into a modular Python application using service layers and separate classes for logic, storage, and interaction.
-- Databases: I implemented persistent storage using JSON and integrated MongoDB to save and display data through a Flask-powered HTML interface. 
-- Security and Data Integrity: I incorporated logic to ensure that invalid operations couldn't occur. For example, disallowing appointment creation when no contacts exist or preventing the use of outdated dates.
-
-Each stage adds new complexity to the same artifact: starting with a basic function tester, then building a working application with data relationships, and finally connecting it to a database and interactive interface. I chose to work from the same base throughout because I wanted to demonstrate not only my technical progression, but also my ability to refactor, build upon, and improve existing work, a highly relevant skill in real-world software maintenance and iteration.
 
 
